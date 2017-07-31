@@ -27,8 +27,11 @@ while(--i > 0){
 function generateBoard(){
 tiles_Flipped = 0;
 let output = '';
-memory_Options.memory_tile_shuffle
+memory_Options.memory_tile_shuffle();
+for(let i = 0; i < memory_Options.length; i++){
+  //  output += '<div id="title_'+i+''"onclick= "memoryFlipTile(item,\''+memory_Options[i]+'/')" ></div>';
 
+  document.getElementById('total_board').innerHTML = output;
 
-
+ }
 }

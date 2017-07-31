@@ -12,7 +12,8 @@
 
 /*This makes each tile appear properly.*/
 #total_board > div {
-background: url() no-repeat;
+/*background: url() no-repeat;*/
+background-color: blue;
 border: 1px solid;
 width: 71px;
 height: 71px;
