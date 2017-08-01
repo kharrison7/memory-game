@@ -4,10 +4,11 @@
 #total_board{
   background: #CCC;
   border: #999 1px solid;
-  width:800px;
-  height:540px;
+  width:1000px;
+  height:780px;
   padding:24px;
-  margin:0px auto;
+  margin-top: 30pt;
+  /*margin:0px auto;*/
 }
 
 /*This makes each tile appear properly.*/
@@ -23,4 +24,40 @@ padding: 20px;
 font-size: 64px;
 cursor:pointer;
 text-align: center;
+}
+
+
+.tile{
+margin: 2pt;
+height: 120pt;
+width: 120pt;
+padding-bottom: ;
+position: relative;
+display: inline-block;
+box-sizing: border-box;
+float: left;
+z-index: 100;
+border: 1pt solid black;
+}
+
+
+
+
+
+/*This makes the tile*/
+/*.tile {
+  display: inline-block;
+  transition: 0.2s;
+  opacity: 0.8;
+  margin: 4px;
+  height: 100px;
+  width: 100px;
+  border: thin solid blue;
+  text-align: center;
+}*/
+
+/*This makes the background color.*/
+body, html {
+  text-align: center;
+  background-color: blue;
 }
