@@ -1,8 +1,10 @@
 
 
 /*This lets the size of the page control the position of the tiles.*/
-body {
+#hereWeFlex {
   display: flex;
+  justify-content: center;
+  align-content: center;
 }
 
 
@@ -33,7 +35,7 @@ cursor:pointer;
 text-align: center;
 }
 
-
+/*This makes the tiles.*/
 .tile{
 margin: 2pt;
 height: 120pt;
@@ -47,6 +49,23 @@ float: left;
 z-index: 100;
 border: 1pt solid black;
 border-radius: 5px;
+}
+
+/*This lets the tile re-size if the screen gets smaller.*/
+@media screen and (max-width: 1058px){
+ .tile{
+  background-color: green;
+  height: 15%;
+  width: 15%;
+ }
+}
+
+@media screen and (max-width: 810px){
+ .tile{
+  background-color: pink;
+  height: 127px;
+  width: 127px;
+ }
 }
 
 
