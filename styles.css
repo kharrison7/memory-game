@@ -13,9 +13,9 @@
   background: #CCC;
   border: #999 1px solid;
   width:1000px;
-  height:780px;
+  height:700px;
   padding:24px;
-  margin-top: 30pt;
+  margin-top: 60pt;
   /*display: flex;*/
   /*margin:0px auto;*/
 }
@@ -36,7 +36,8 @@ text-align: center;
 }
 
 /*This makes the tiles.*/
-.tile{
+/*.tile{*/
+li{
 margin: 2pt;
 height: 120pt;
 width: 120pt;
