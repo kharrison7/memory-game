@@ -1,5 +1,11 @@
 
 
+/*This lets the size of the page control the position of the tiles.*/
+body {
+  display: flex;
+}
+
+
 /*This makes the outer board appear properly.*/
 #total_board{
   background: #CCC;
@@ -32,7 +38,7 @@ text-align: center;
 margin: 2pt;
 height: 120pt;
 width: 120pt;
-background-color: #4F56FF;
+background-color: #7986cb;
 /*padding-bottom: ;*/
 position: relative;
 display: inline-block;
@@ -40,6 +46,7 @@ box-sizing: border-box;
 float: left;
 z-index: 100;
 border: 1pt solid black;
+border-radius: 5px;
 }
 
 
