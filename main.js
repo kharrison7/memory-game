@@ -13,19 +13,18 @@ let memory_TileIDs = [];
 let tiles_Flipped = 0;
 
 
-// let hold_Array = [];
-// for (i=0;i<memory_Options.length;i++){
-//   hold_Array.push(memory_Options[i]);
-// }
+
+
 
 
 // This generates a random order of memory_Options Array.
-
 let hold_Array = ['a', 'a', 'b', 'b', 'c', 'c', 'd', 'd', 'e', 'e', 'f', 'f', 'g', 'g', 'h', 'h', 'i', 'i'];
 
 let random_Set = [];
-for( let i = 0; i < memory_Options.length; i++ ){
-  // This gives a random integer within the memory_Options.length values.
+
+function shuffle(){
+ for( let i = 0; i < memory_Options.length; i++ ){
+    // This gives a random integer within the memory_Options.length values.
     // console.log("trying to pop");
     let r = Math.floor((Math.random() * hold_Array.length));
     console.log("Iteration:",i,"of",memory_Options.length,"possibilities");
@@ -38,19 +37,22 @@ for( let i = 0; i < memory_Options.length; i++ ){
     // console.log("Random array:",random_Set);
     // console.log("Hold array:",hold_Array);
 
-}
+ }
 console.log(random_Set);
+return random_Set;
+}
 
 
 
 // Code to make tiles appear.
+
+function placeTiles(){
+// runs the shuffle function.
+  shuffle();
 // This makes the itemList node attach to the total_board element on the HTML page.
 let itemList = document.querySelector( "#total_board" );
-
-
-
 // This makes a loop to go through the memor_Options array.
-for( let i = 0; i < memory_Options.length; i++ ){
+  for( let i = 0; i < memory_Options.length; i++ ){
 
 // This creates an li value to act as a tile.
     let li       = document.createElement( "li" );
@@ -67,4 +69,8 @@ for( let i = 0; i < memory_Options.length; i++ ){
     li.appendChild( liH2 );
 // This adds the li to the itemList.
     itemList.appendChild( li );
+  }
 }
+
+
+placeTiles();
