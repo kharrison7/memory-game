@@ -101,15 +101,29 @@ function placeHeader(){
   itemList.appendChild( li );
 }
 
-// This makes the clock tick.
 
+
+
+// This makes the clock tick.
 var counter = 0;//set this to what ever you want the start # to be
 function tickTock(){
 		counter++;//increment the counter by 1
 		setTimeout ( "tickTock()", 1000 );//runs itsself after 1000 miliseconds
 		//console.log(counter);uncomment to can see it in action, only with firebug
 		// console.log(counter + "seconds.")
-    let liText = counter;
+
+   let min = Math.floor(counter/60);
+   let sec = counter%60;
+   let liText;
+   if( min === 0 ){
+   liText = sec + "sec";
+   }
+   else if( min === 10 ){
+     liText = "Time Expired."
+   }
+   else{
+    liText = min + "min " + sec + "sec";
+   }
 
 // This moves the text to the H2.
     liH2.innerHTML = liText ;
