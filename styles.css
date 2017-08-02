@@ -52,6 +52,15 @@ border: 1pt solid black;
 border-radius: 5px;
 }
 
+
+
+
+.show{
+/*This controls the flip transitions.*/
+transform:rotateX(10deg);
+transition: All 2s;
+}
+
 /*This lets the tile re-size if the screen gets smaller.*/
 @media screen and (max-width: 1058px){
  .tile{

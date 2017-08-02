@@ -37,6 +37,10 @@ function shuffle(){
     // console.log("Random array:",random_Set);
     // console.log("Hold array:",hold_Array);
 
+ console.log(i + " index value is " + hold_Array[r]);
+    //  hold_Array.map((item, index, arr) => {
+    //   console.log (item, index, arr);
+    //  });
  }
 console.log(random_Set);
 return random_Set;
@@ -45,12 +49,16 @@ return random_Set;
 
 
 
-function clickToFlip(tile_num){
+function clickToFlip() {
 console.log("Clicked a tile");
+console.log(this.id);
 
+
+
+// let target = e.target;
+// // let target = e.srcElement;
+this.setAttribute("class", "show");
 }
-
-
 
 
 // Code to make tiles appear.
@@ -73,7 +81,14 @@ let itemList = document.querySelector( "#total_board" );
     let liText = document.createTextNode( random_Set[ i ] );
 
 // This makes the tile respond to being clicked.
-    li.setAttribute("onclick", "clickToFlip()");
+    // li.setAttribute("onclick", "clickToFlip()");
+    li.addEventListener('click', clickToFlip);
+
+
+// This creates a class for the tile and set it to hide.
+    li.setAttribute("class", "hide");
+// This sets each tile with an id.
+   li.setAttribute("id", "card" + i);
 
 // This moves the text to the H2.
     liH2.appendChild( liText );
@@ -118,7 +133,7 @@ function tickTock(){
    if( min === 0 ){
    liText = sec + "sec";
    }
-   else if( min === 10 ){
+   else if( min >= 10 ){
      liText = "Time Expired."
    }
    else{
@@ -136,8 +151,6 @@ let clockSpot = document.querySelector( "#clockGoesHere" );
 let clock       = document.createElement( "div" );
 let liH2     = document.createElement( "h2" );
 tickTock();
-
-
 
 
 
