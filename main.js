@@ -350,6 +350,31 @@ let liH2     = document.createElement( "h2" );
 
 
 // These functions make the game appear.
+
+// This code runs when the one opens the page.
+function start_Game_Button(){
+let a = document.querySelector( "#total_board" );
+let c     = document.createElement( "h1" );
+c.setAttribute("class", "end_Message");
+let d = "start";
+c.addEventListener('click', game_On);
+c.innerHTML = d ;
+a.appendChild( c );
+}
+
+// This runs when start is clicked.
+function game_On(){
+// This removes the start button.
+let x = document.getElementsByClassName("end_Message");
+while ( 0 < x.length ){
+ x[0].remove();
+}
+
+// This begins the game.
 tickTock();
 placeHeader();
 placeTiles();
+}
+
+
+start_Game_Button();
