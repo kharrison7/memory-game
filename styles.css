@@ -71,20 +71,28 @@ border-radius: 5px;
 /*This controls the flip transitions.*/
 transition: All 2s;
 transform:rotateX(360deg);
+font-size: 15pt;
 
 color: black;
 background-color: #7986cb;
 border: 2pt solid #7733FF;
+
+color: black;
 }
 
 .show_Forever{
 /*This controls the flip transitions.*/
 transition: All 2s;
 transform:rotateX(360deg);
-
+font-size: 25pt;
 color: black;
 background-color: #7986cb;
 border: 2pt solid #5EFF33;
+
+color: black;
+  -webkit-text-fill-color: #CAFFCA; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #009EFF;
 
 }
 
