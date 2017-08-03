@@ -50,11 +50,17 @@ function checkForMatch(){
   if ( letter1 === letter2){
     console.log("Match Made!");
     let x = document.getElementsByClassName("show");
-    for( let i = 0; i < x.length; i++ ){
-      x[i].setAttribute("class", "show_Forever");
+    while (x.length > 0){
+      // Removes eventListener.
+      // x[0].removeEventListener("click", clickToFlip);
+      // Changes match to show forever.
+      x[0].setAttribute("class", "show_Forever");
     }
+    return true;
   }
+
 }
+
 
 
 function returnFaceDown(){
@@ -108,7 +114,7 @@ tiles_Flipped_Even += 1;
      case 1: card_One = this.id;
      break;
      case 2: card_Two = this.id;
-             checkForMatch();
+
      break;
      case 3:
      returnFaceDown();
@@ -119,18 +125,29 @@ tiles_Flipped_Even += 1;
     //  Insert code here to return 2 cards to hide.
     // Probably a function.
    }
+
+
+   // console.log(this.id);
+   // This makes the card change class and flip.
+   this.setAttribute("class", "show");
+
+
+// This calls the checkForMatch function.
+switch(tiles_Flipped_Even%2){
+  case 0: checkForMatch();
+  if (checkForMatch()){
+    this.setAttribute("class", "show_Forever");
+  }
+}
+
+
+
    console.log("Tiles e/o: " + tiles_Flipped_Even);
 console.log("card_One is " + card_One);
   console.log("card_Two is " + card_Two);
 
 
 
-
-
-
-// console.log(this.id);
-// This makes the card change class and flip.
-this.setAttribute("class", "show");
 // This gives the letter on the tile.
 let letterOnCard = this.id.slice(-1);
 // console.log("The letter on the card is " +letterOnCard);
