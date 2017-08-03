@@ -10,8 +10,8 @@
 
 /*This makes the outer board appear properly.*/
 #total_board{
-  background: #CCC;
-  border: #999 1px solid;
+  background: transparent;
+  /*border: #999 1px solid;*/
   width:1000px;
   height:700px;
   padding:24px;
@@ -64,6 +64,10 @@ border-radius: 5px;
   /*text-shadow: 0 0 5px #7986cb;*/
   background-color: #7986cb;
 
+  background-image: url("images/triforce_wallpaper_by_twilease-d3182ft.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 
@@ -148,5 +152,9 @@ color: black;
 /*This makes the background color.*/
 body, html {
   text-align: center;
-  background-color: blue;
+  background-image: url("images/triforce_wallpaper_by_twilease-d3182ft.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: white;
 }
