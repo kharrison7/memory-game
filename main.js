@@ -40,6 +40,50 @@ console.log(random_Set);
 return random_Set;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+function game_Won(){
+// This removes the header.
+let h2_Elements = document.getElementsByTagName("h2");
+   while ( 0 < h2_Elements.length ){
+    h2_Elements[0].remove();
+   }
+
+  // This places a you won message where the timer was located.
+  let a = document.querySelector( "#clockGoesHere" );
+  let b      = document.createElement( "div" );
+  let c     = document.createElement( "h1" );
+  let d = "You Won!";
+  c.innerHTML = d ;
+// This adds the H2 to the li tile.
+  b.appendChild( c );
+// This adds the li to the itemList.
+  a.appendChild( b );
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Keeps count of tile sets that are matched.
 let tile_Sets_Matched = 0;
 
@@ -58,12 +102,11 @@ function checkForMatch(){
       // Changes match to show forever.
       x[0].setAttribute("class", "show_Forever");
     }
+
+    // This checks to see if you won the game.
     tile_Sets_Matched = tile_Sets_Matched + 1;
     if (tile_Sets_Matched === 18){
-      console.log("Game Won!");
-      console.log("Game Won!");
-      console.log("Game Won!");
-      console.log("Game Won!");
+      game_Won();
       console.log("Game Won!");
     }
     return true;
