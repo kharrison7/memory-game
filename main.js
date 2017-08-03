@@ -48,7 +48,29 @@ return random_Set;
 function clickToFlip() {
 console.log("Clicked a tile");
 console.log(this.id);
+// This makes the card change class and flip.
 this.setAttribute("class", "show");
+// This gives the letter on the tile.
+console.log(this.id.slice(-1));
+
+// This gives the tile number:
+let num1 = this.id.charAt(4);
+let numBoth = this.id.charAt(4) + this.id.charAt(5);
+let unknown = this.id.charAt(5);
+
+     if (num1 === '1' ){
+      //  console.log("If runs.");
+        if(unknown >= 0){
+          // console.log("Above 9");
+          console.log(numBoth);
+        }
+        else{
+          console.log(num1);
+        }
+     }
+     else{
+       console.log(num1);
+     }
 }
 
 
@@ -68,16 +90,16 @@ let itemList = document.querySelector( "#total_board" );
 // This creates an H2 element.
     let liH2     = document.createElement( "h2" );
 
-// This places the memor_Options text into the liText.
+// This places the random_Set text into the liText.
     let liText = document.createTextNode( random_Set[ i ] );
 
 // This makes the tile respond to being clicked.
-    li.addEventListener('click', clickToFlip);
+  li.addEventListener('click', clickToFlip);
 
 // This creates a class for the tile and set it to hide.
    li.setAttribute("class", "hide");
-// This sets each tile with an id based on position on the game board.
-   li.setAttribute("id", "card" + i);
+// This sets each tile with an id based on position on the game board AND the card value.
+   li.setAttribute("id", "card" + i + random_Set[ i ]);
 // This moves the text to the H2.
     liH2.appendChild( liText );
 // This adds the H2 to the li tile.
