@@ -127,7 +127,7 @@ function checkForMatch(){
     // This checks to see if you won the game.
     // This checks to see if you won the game.
     tile_Sets_Matched = tile_Sets_Matched + 1;
-    if (tile_Sets_Matched === 2){
+    if (tile_Sets_Matched === 18){
       game_Won();
       console.log("Game Won!");
     }
@@ -377,6 +377,10 @@ while ( 0 < x.length ){
 
 // This resets some values if begin another game.
 game_Is_Over = false;
+hold_Array = ['a', 'a', 'b', 'b', 'c', 'c', 'd', 'd', 'e', 'e', 'f', 'f', 'g', 'g', 'h', 'h', 'i', 'i'];
+random_Set = [];
+tiles_Flipped_Even = 0;
+tile_Sets_Matched = 0;
 
 // This begins the game.
 tickTock();
