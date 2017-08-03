@@ -363,6 +363,8 @@ let d = "start";
 c.addEventListener('click', game_On);
 c.innerHTML = d ;
 a.appendChild( c );
+
+
 }
 
 // This runs when start is clicked.
@@ -372,6 +374,9 @@ let x = document.getElementsByClassName("end_Message");
 while ( 0 < x.length ){
  x[0].remove();
 }
+
+// This resets some values if begin another game.
+game_Is_Over = false;
 
 // This begins the game.
 tickTock();
