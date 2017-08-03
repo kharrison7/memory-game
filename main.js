@@ -146,6 +146,7 @@ let x = document.getElementsByClassName("show");
 // Hides all the show tiles.
 while (x.length > 0){
   x[0].setAttribute("class", "hide");
+  // x[0].addEventListener('click', clickToFlip);
 
 }
 
