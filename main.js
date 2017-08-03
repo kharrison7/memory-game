@@ -44,34 +44,33 @@ return random_Set;
 
 
 
-
+// This controls the actions of the cards when flipped.
 function clickToFlip() {
 console.log("Clicked a tile");
 console.log(this.id);
 // This makes the card change class and flip.
 this.setAttribute("class", "show");
 // This gives the letter on the tile.
-console.log(this.id.slice(-1));
+let letterOnCard = this.id.slice(-1);
+console.log("The letter on the card is " +letterOnCard);
 
-// This gives the tile number:
+// This gives the tile number as a string
 let num1 = this.id.charAt(4);
 let numBoth = this.id.charAt(4) + this.id.charAt(5);
 let unknown = this.id.charAt(5);
 
-     if (num1 === '1' ){
-      //  console.log("If runs.");
-        if(unknown >= 0){
-          // console.log("Above 9");
-          console.log(numBoth);
-        }
-        else{
-          console.log(num1);
-        }
+     if (num1 === '1' && unknown >= 0){
+          console.log("The card number is " + numBoth);
      }
      else{
-       console.log(num1);
+       console.log("The card number is " + num1);
      }
 }
+
+
+
+
+
 
 
 // Code to make tiles appear.
