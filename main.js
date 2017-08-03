@@ -40,6 +40,8 @@ console.log(random_Set);
 return random_Set;
 }
 
+// Keeps count of tile sets that are matched.
+let tile_Sets_Matched = 0;
 
 // This checks to see if the last 2 cards clicked match.
 // If a match then the class for the cards changes to show_Forever.
@@ -56,6 +58,14 @@ function checkForMatch(){
       // Changes match to show forever.
       x[0].setAttribute("class", "show_Forever");
     }
+    tile_Sets_Matched = tile_Sets_Matched + 1;
+    if (tile_Sets_Matched === 18){
+      console.log("Game Won!");
+      console.log("Game Won!");
+      console.log("Game Won!");
+      console.log("Game Won!");
+      console.log("Game Won!");
+    }
     return true;
   }
 
@@ -67,7 +77,7 @@ function returnFaceDown(){
 
 // Creates an array of all the class of all the show tiles.
 let x = document.getElementsByClassName("show");
-console.log("There are " + x.length + " show tiles.");
+// console.log("There are " + x.length + " show tiles.");
 // Hides all the show tiles.
 while (x.length > 0){
   x[0].setAttribute("class", "hide");
@@ -141,12 +151,10 @@ switch(tiles_Flipped_Even%2){
     this.setAttribute("class", "show_Forever");
   }
 }
-console.log("This class is " + this.className);
-
-
-   console.log("Tiles e/o: " + tiles_Flipped_Even);
-console.log("card_One is " + card_One);
-  console.log("card_Two is " + card_Two);
+// console.log("This class is " + this.className);
+  //  console.log("Tiles e/o: " + tiles_Flipped_Even);
+// console.log("card_One is " + card_One);
+  // console.log("card_Two is " + card_Two);
 
 
 
@@ -168,7 +176,7 @@ let trueNum = 0;
       //  console.log("The card number is " + num1);
       trueNum = num1;
      }
-     console.log("The card number is " + trueNum);
+    //  console.log("The card number is " + trueNum);
 // This ends the number code.
 
 
@@ -266,11 +274,12 @@ function tickTock(){
 let clockSpot = document.querySelector( "#clockGoesHere" );
 let clock       = document.createElement( "div" );
 let liH2     = document.createElement( "h2" );
-tickTock();
+
 
 
 
 
 // These functions make the game appear.
+tickTock();
 placeHeader();
 placeTiles();
