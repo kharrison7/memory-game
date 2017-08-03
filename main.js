@@ -111,14 +111,14 @@ function checkForMatch(){
   console.log("check for match.");
   let letter1 = card_One.slice(-1);
   let letter2 = card_Two.slice(-1);
-  if ( letter1 === letter2){
+  if ( letter1 === letter2 && card_One != card_Two){
     console.log("Match Made!");
     let x = document.getElementsByClassName("show");
     while (x.length > 0){
       // Removes eventListener.
       x[0].removeEventListener("click", clickToFlip);
       // Changes match to show forever.
-      x[0].setAttribute("class", "show_Forever");
+      x[0].setAttribute("class", "show_Forever " + letter1);
     }
 
     // This checks to see if you won the game.
@@ -178,20 +178,42 @@ while (x.length > 0){
 // Keeps track of the number of tiles flipped and card letters.
 let tiles_Flipped_Even = 0;
 let card_One;
+let card1number;
 let card_Two;
+let card2number;
 
 // This controls the actions of the cards when flipped.
 function clickToFlip() {
+
+  // This gives the tile number as a string
+  let num1 = this.id.charAt(4);
+  let numBoth = this.id.charAt(4) + this.id.charAt(5);
+  let unknown = this.id.charAt(5);
+  let trueNum = 0;
+
+       if (num1 === '1' && unknown >= 0){
+            // console.log("The card number is " + numBoth);
+            trueNum = numBoth;
+       }
+       else{
+        //  console.log("The card number is " + num1);
+        trueNum = num1;
+       }
+      //  console.log("The card number is " + trueNum);
+  // This ends the number code.
+
+
   // This makes certain that the tile isn't a show_Forever tile.
-if(this.className != "show_Forever"){
+if(this.className != "show_Forever" && this.className != "show"){
 // This checks to see if 2 cards are shown.
 tiles_Flipped_Even += 1;
 // console.log("Clicked a tile " + tiles_Flipped + " times.");
    switch(tiles_Flipped_Even){
      case 1: card_One = this.id;
+             card1number = trueNum;
      break;
      case 2: card_Two = this.id;
-
+             card2number = trueNum;
      break;
      case 3:
      returnFaceDown();
@@ -206,45 +228,26 @@ tiles_Flipped_Even += 1;
 
    // console.log(this.id);
    // This makes the card change class and flip.
-   this.setAttribute("class", "show");
+   this.setAttribute("class", "show " + this.id.slice(-1));
 }
 
 // This calls the checkForMatch function. If matched this card becomes show_Forever.
 switch(tiles_Flipped_Even%2){
   case 0: checkForMatch();
   if (checkForMatch()){
-    this.setAttribute("class", "show_Forever");
+    this.setAttribute("class", "show_Forever " + this.id.slice(-1));
   }
 }
-// console.log("This class is " + this.className);
-  //  console.log("Tiles e/o: " + tiles_Flipped_Even);
-// console.log("card_One is " + card_One);
-  // console.log("card_Two is " + card_Two);
+console.log("This class is " + this.className);
+   console.log("Tiles e/o: " + tiles_Flipped_Even);
+console.log("card_One is " + card_One);
+  console.log("card_Two is " + card_Two);
 
 
 
 // This gives the letter on the tile.
 let letterOnCard = this.id.slice(-1);
 // console.log("The letter on the card is " +letterOnCard);
-
-// This gives the tile number as a string
-let num1 = this.id.charAt(4);
-let numBoth = this.id.charAt(4) + this.id.charAt(5);
-let unknown = this.id.charAt(5);
-let trueNum = 0;
-
-     if (num1 === '1' && unknown >= 0){
-          // console.log("The card number is " + numBoth);
-          trueNum = numBoth;
-     }
-     else{
-      //  console.log("The card number is " + num1);
-      trueNum = num1;
-     }
-    //  console.log("The card number is " + trueNum);
-// This ends the number code.
-
-
 }
 
 
