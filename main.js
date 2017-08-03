@@ -52,7 +52,7 @@ function checkForMatch(){
     let x = document.getElementsByClassName("show");
     while (x.length > 0){
       // Removes eventListener.
-      // x[0].removeEventListener("click", clickToFlip);
+      x[0].removeEventListener("click", clickToFlip);
       // Changes match to show forever.
       x[0].setAttribute("class", "show_Forever");
     }
