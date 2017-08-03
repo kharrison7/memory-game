@@ -58,19 +58,34 @@ border-radius: 5px;
 /*These control the card appearances while the card is hidden and flipped.*/
 .hide{
   transform:rotateX(180deg);
-  transition: All 1s;
+  transition: All 2s;
   /*color: #7986cb;*/
-
   color: transparent;
   /*text-shadow: 0 0 5px #7986cb;*/
+  background-color: #7986cb;
+
 }
 
 
-.show || .show_Forever{
+.show{
 /*This controls the flip transitions.*/
-transform:rotateX(180deg);
 transition: All 2s;
+transform:rotateX(360deg);
+
 color: black;
+background-color: #7986cb;
+border: 2pt solid #7733FF;
+}
+
+.show_Forever{
+/*This controls the flip transitions.*/
+transition: All 2s;
+transform:rotateX(360deg);
+
+color: black;
+background-color: #7986cb;
+border: 2pt solid #5EFF33;
+
 }
 
 

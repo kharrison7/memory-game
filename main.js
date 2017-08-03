@@ -71,8 +71,8 @@ console.log("There are " + x.length + " show tiles.");
 // Hides all the show tiles.
 while (x.length > 0){
   x[0].setAttribute("class", "hide");
-}
 
+}
 
 //
 // for( let i = 0; i < x.length; i++ ){
