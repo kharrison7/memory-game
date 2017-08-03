@@ -230,7 +230,7 @@ tiles_Flipped_Even += 1;
    // console.log(this.id);
    // This makes the card change class and flip.
    this.setAttribute("class", "show " + this.id.slice(-1));
-   this.removeEventListener("click", clickToFlip);
+  //  this.removeEventListener("click", clickToFlip);
 }
 
 // This calls the checkForMatch function. If matched this card becomes show_Forever.

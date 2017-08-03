@@ -74,13 +74,18 @@ border-radius: 5px;
 /*This controls the flip transitions.*/
 transition: All 1s;
 transform:rotateX(360deg);
-font-size: 15pt;
+/*font-size: 15pt;*/
 
-color: black;
+/*color: black;*/
 background-color: #7986cb;
 border: 2pt solid #7733FF;
 
-color: black;
+text-align: center;
+background-size: 100% 100%;
+background-repeat: no-repeat;
+background-position: center center;
+background-color: white;
+
 }
 
 .show_Forever{
@@ -170,10 +175,6 @@ body, html {
 /*These control the tile images:*/
 /*These control the tile images:*/
 .b{
-  text-align: center;
   background-image: url("Tile_Images/small_the-legend-of-zelda-video-game-minimal-sword.jpg");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-color: white;
+
 }
