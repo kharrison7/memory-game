@@ -309,7 +309,7 @@ function placeHeader(){
 
 
 // This makes the clock tick.
-var counter = 0;//set this to what ever you want the start # to be
+let counter = 0;//set this to what ever you want the start # to be
 function tickTock(){
 
 // This turns the clock off if the game is won.
@@ -381,6 +381,7 @@ hold_Array = ['a', 'a', 'b', 'b', 'c', 'c', 'd', 'd', 'e', 'e', 'f', 'f', 'g', '
 random_Set = [];
 tiles_Flipped_Even = 0;
 tile_Sets_Matched = 0;
+counter = 0;
 
 // This begins the game.
 tickTock();
