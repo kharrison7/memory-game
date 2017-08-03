@@ -107,6 +107,8 @@ let card_Two;
 
 // This controls the actions of the cards when flipped.
 function clickToFlip() {
+  // This makes certain that the tile isn't a show_Forever tile.
+if(this.className != "show_Forever"){
 // This checks to see if 2 cards are shown.
 tiles_Flipped_Even += 1;
 // console.log("Clicked a tile " + tiles_Flipped + " times.");
@@ -130,16 +132,16 @@ tiles_Flipped_Even += 1;
    // console.log(this.id);
    // This makes the card change class and flip.
    this.setAttribute("class", "show");
+}
 
-
-// This calls the checkForMatch function.
+// This calls the checkForMatch function. If matched this card becomes show_Forever.
 switch(tiles_Flipped_Even%2){
   case 0: checkForMatch();
   if (checkForMatch()){
     this.setAttribute("class", "show_Forever");
   }
 }
-
+console.log("This class is " + this.className);
 
 
    console.log("Tiles e/o: " + tiles_Flipped_Even);
