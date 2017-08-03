@@ -1,8 +1,4 @@
 
-// A lot of this code is based on this tutorial
-// https://www.youtube.com/watch?v=c_ohDPWmsM0
-
-
 // This holds all the possible images on the memory tiles.
 let memory_Options = ['a', 'a', 'b', 'b', 'c', 'c', 'd', 'd', 'e', 'e', 'f', 'f', 'g', 'g', 'h', 'h', 'i', 'i'];
 
@@ -52,11 +48,6 @@ return random_Set;
 function clickToFlip() {
 console.log("Clicked a tile");
 console.log(this.id);
-
-
-
-// let target = e.target;
-// // let target = e.srcElement;
 this.setAttribute("class", "show");
 }
 
@@ -81,15 +72,12 @@ let itemList = document.querySelector( "#total_board" );
     let liText = document.createTextNode( random_Set[ i ] );
 
 // This makes the tile respond to being clicked.
-    // li.setAttribute("onclick", "clickToFlip()");
     li.addEventListener('click', clickToFlip);
 
-
 // This creates a class for the tile and set it to hide.
-    li.setAttribute("class", "hide");
-// This sets each tile with an id.
+   li.setAttribute("class", "hide");
+// This sets each tile with an id based on position on the game board.
    li.setAttribute("id", "card" + i);
-
 // This moves the text to the H2.
     liH2.appendChild( liText );
 // This adds the H2 to the li tile.
@@ -102,7 +90,7 @@ let itemList = document.querySelector( "#total_board" );
 // This places the header and the clock.
 function placeHeader(){
   let itemList = document.querySelector( "#header" );
-
+// This creates a div to hold the header.
   let li       = document.createElement( "div" );
 // This creates an H2 element.
   let liH2     = document.createElement( "h2" );

@@ -57,7 +57,7 @@ border-radius: 5px;
 
 .show{
 /*This controls the flip transitions.*/
-transform:rotateX(10deg);
+transform:rotateX(360deg);
 transition: All 2s;
 }
 
