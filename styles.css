@@ -96,6 +96,12 @@ color: black;
 
 }
 
+/*This changes the final message styling.*/
+.end_Message {
+  width: 100%;
+  background-color: 0;
+  border: 0px;
+}
 
 
 

@@ -48,27 +48,41 @@ return random_Set;
 
 
 
-
-
-
+// This checks to see if the game was won.
+// This checks to see if the game was won.
+// This checks to see if the game was won.
+let game_Is_Over = false;
 
 function game_Won(){
+// This variable should shut down the clock.
+game_Is_Over = true;
 // This removes the header.
 let h2_Elements = document.getElementsByTagName("h2");
    while ( 0 < h2_Elements.length ){
     h2_Elements[0].remove();
    }
-
-  // This places a you won message where the timer was located.
-  let a = document.querySelector( "#clockGoesHere" );
-  let b      = document.createElement( "div" );
+  //  This removes all of the tiles.
+let tile_Elements = document.getElementsByTagName("li");
+  while ( 0 < tile_Elements.length ){
+    tile_Elements[0].remove();
+  }
+  // This places a you won message with the time you took to win where the timer was located.
+  let a = document.querySelector( "#total_board" );
   let c     = document.createElement( "h1" );
-  let d = "You Won!";
+  c.setAttribute("class", "end_Message");
+    // This converts the counter value into min and sec.
+    let min = Math.floor(counter/60);
+    let sec = counter%60;
+    let time_Took;
+    if( min === 0 ){
+     time_Took = sec + " sec";
+    }
+    else{
+     time_Took = min + " min " + sec + " sec";
+    }
+  let d = "You Won! in " + time_Took;
   c.innerHTML = d ;
-// This adds the H2 to the li tile.
-  b.appendChild( c );
-// This adds the li to the itemList.
-  a.appendChild( b );
+  a.appendChild( c );
 }
 
 
@@ -88,6 +102,7 @@ let h2_Elements = document.getElementsByTagName("h2");
 let tile_Sets_Matched = 0;
 
 // This checks to see if the last 2 cards clicked match.
+// This also checks to see if all the cards have been matched.
 // If a match then the class for the cards changes to show_Forever.
 function checkForMatch(){
   console.log("check for match.");
@@ -103,6 +118,10 @@ function checkForMatch(){
       x[0].setAttribute("class", "show_Forever");
     }
 
+    // This checks to see if you won the game.
+    // This checks to see if you won the game.
+    // This checks to see if you won the game.
+    // This checks to see if you won the game.
     // This checks to see if you won the game.
     tile_Sets_Matched = tile_Sets_Matched + 1;
     if (tile_Sets_Matched === 18){
@@ -289,6 +308,14 @@ function placeHeader(){
 // This makes the clock tick.
 var counter = 0;//set this to what ever you want the start # to be
 function tickTock(){
+
+// This turns the clock off if the game is won.
+if (game_Is_Over === true){
+  console.log("Clock turns off");
+  return counter;
+}
+
+// This actually makes the clock "tick".
 		counter++;//increment the counter by 1
 		setTimeout ( "tickTock()", 1000 );//runs itsself after 1000 miliseconds
 		//console.log(counter);uncomment to can see it in action, only with firebug
@@ -298,13 +325,13 @@ function tickTock(){
    let sec = counter%60;
    let liText;
    if( min === 0 ){
-   liText = sec + "sec";
+   liText = sec + " sec";
    }
    else if( min >= 10 ){
      liText = "Time Expired."
    }
    else{
-    liText = min + "min " + sec + "sec";
+    liText = min + " min " + sec + " sec";
    }
 
 // This moves the text to the H2.
