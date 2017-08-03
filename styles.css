@@ -58,12 +58,12 @@ border-radius: 5px;
 /*These control the card appearances while the card is hidden and flipped.*/
 .hide{
   /*transform:rotateX(360deg);*/
-  transition: All 1s;
+  transition: All 0s;
   color: #7986cb;
 }
 
 
-.show{
+.show || .show_Forever{
 /*This controls the flip transitions.*/
 transform:rotateX(360deg);
 transition: All 2s;
