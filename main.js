@@ -3,6 +3,7 @@
 let memory_Options = ['a', 'a', 'b', 'b', 'c', 'c', 'd', 'd', 'e', 'e', 'f', 'f', 'g', 'g', 'h', 'h', 'i', 'i'];
 
 // Holds tile IDs for a given game.
+// This is incase I add the ability to sync images or build custom games.
 let memory_Values = [];
 let memory_TileIDs = [];
 
@@ -41,11 +42,17 @@ return random_Set;
 
 
 // This checks to see if the last 2 cards clicked match.
+// If a match then the class for the cards changes to show_Forever.
 function checkForMatch(){
+  console.log("check for match.");
   let letter1 = card_One.slice(-1);
   let letter2 = card_Two.slice(-1);
   if ( letter1 === letter2){
     console.log("Match Made!");
+    let x = document.getElementsByClassName("show");
+    for( let i = 0; i < x.length; i++ ){
+      x[i].setAttribute("class", "show_Forever");
+    }
   }
 }
 
@@ -56,11 +63,18 @@ function returnFaceDown(){
 let x = document.getElementsByClassName("show");
 console.log("There are " + x.length + " show tiles.");
 // Hides all the show tiles.
-for( let i = 0; i < x.length; i++ ){
- x[i].setAttribute("class", "hide");
- }
- // This returns card_Two to hidden as the above loop diminishes.
- x[0].setAttribute("class", "hide");
+while (x.length > 0){
+  x[0].setAttribute("class", "hide");
+}
+
+
+//
+// for( let i = 0; i < x.length; i++ ){
+//  x[i].setAttribute("class", "hide");
+//  }
+//
+//  // This returns card_Two to hidden as the above loop diminishes.
+//  x[0].setAttribute("class", "hide");
 
 //
 // let x = document.getElementById('card_One');
