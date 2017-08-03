@@ -54,11 +54,13 @@ function returnFaceDown(){
 
 // Creates an array of all the class of all the show tiles.
 let x = document.getElementsByClassName("show");
-console.log("There are " + x.length + "show tiles.");
+console.log("There are " + x.length + " show tiles.");
 // Hides all the show tiles.
 for( let i = 0; i < x.length; i++ ){
  x[i].setAttribute("class", "hide");
  }
+ // This returns card_Two to hidden as the above loop diminishes.
+ x[0].setAttribute("class", "hide");
 
 //
 // let x = document.getElementById('card_One');
