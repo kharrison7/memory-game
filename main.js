@@ -145,8 +145,8 @@ let x = document.getElementsByClassName("show");
 // console.log("There are " + x.length + " show tiles.");
 // Hides all the show tiles.
 while (x.length > 0){
+  x[0].addEventListener('click', clickToFlip);
   x[0].setAttribute("class", "hide");
-  // x[0].addEventListener('click', clickToFlip);
 
 }
 
@@ -230,6 +230,7 @@ tiles_Flipped_Even += 1;
    // console.log(this.id);
    // This makes the card change class and flip.
    this.setAttribute("class", "show " + this.id.slice(-1));
+   this.removeEventListener("click", clickToFlip);
 }
 
 // This calls the checkForMatch function. If matched this card becomes show_Forever.
@@ -237,6 +238,7 @@ switch(tiles_Flipped_Even%2){
   case 0: checkForMatch();
   if (checkForMatch()){
     this.setAttribute("class", "show_Forever " + this.id.slice(-1));
+    this.removeEventListener("click", clickToFlip);
   }
 }
 console.log("This class is " + this.className);
