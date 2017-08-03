@@ -83,6 +83,9 @@ let tile_Elements = document.getElementsByTagName("li");
   let d = "You Won! in " + time_Took;
   c.innerHTML = d ;
   a.appendChild( c );
+
+  // This makes a new start button appear.
+  start_Game_Button();
 }
 
 
@@ -124,7 +127,7 @@ function checkForMatch(){
     // This checks to see if you won the game.
     // This checks to see if you won the game.
     tile_Sets_Matched = tile_Sets_Matched + 1;
-    if (tile_Sets_Matched === 18){
+    if (tile_Sets_Matched === 2){
       game_Won();
       console.log("Game Won!");
     }
@@ -376,5 +379,5 @@ placeHeader();
 placeTiles();
 }
 
-
+// This runs when the game is begun.
 start_Game_Button();
