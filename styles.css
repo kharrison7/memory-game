@@ -85,6 +85,7 @@ background-size: 100% 100%;
 background-repeat: no-repeat;
 background-position: center center;
 background-color: white;
+color: transparent;
 
 }
 
@@ -92,15 +93,18 @@ background-color: white;
 /*This controls the flip transitions.*/
 transition: All 1s;
 transform:rotateX(360deg);
-font-size: 25pt;
+/*font-size: 25pt;
 color: black;
-background-color: #7986cb;
+background-color: #7986cb;*/
 border: 2pt solid #5EFF33;
+color: transparent;
 
-color: black;
-  -webkit-text-fill-color: #CAFFCA; /* Will override color (regardless of order) */
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #009EFF;
+
+  text-align: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: white;
 
 }
 
@@ -174,7 +178,33 @@ body, html {
 /*These control the tile images:*/
 /*These control the tile images:*/
 /*These control the tile images:*/
+.a{
+  background-image: url("Tile_Images/Distressed-Zelda-Triforce-Symbol-T-Shirt.jpg");
+}
 .b{
   background-image: url("Tile_Images/small_the-legend-of-zelda-video-game-minimal-sword.jpg");
-
+}
+.c{
+  background-image: url("Tile_Images/HFme1Xz.gif");
+}
+.d{
+  background-image: url("Tile_Images/tenor.gif");
+}
+.e{
+  background-image: url("Tile_Images/192148.jpg");
+}
+.f{
+  background-image: url("Tile_Images/the_legend_of_zelda_sword_graphics_background_22303_3840x2400.jpg");
+}
+.g{
+  /*blueshield*/
+  background-size: 100% 120%;
+  background-position: center 0pt;
+  background-image: url("Tile_Images/9d5826784a3a16ca03b449ce3602afc7524c5eb6_hq.jpg");
+}
+.h{
+  background-image: url("Tile_Images/tenor-1.gif");
+}
+.i{
+  background-image: url("Tile_Images/bUv4KW8.gif");
 }
