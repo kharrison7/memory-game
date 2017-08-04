@@ -29,7 +29,7 @@
 /*This makes each tile appear properly.*/
 #total_board > div {
 /*background: url() no-repeat;*/
-background-color: #0223FF;
+/*background-color: #0223FF;
 border: 1px solid;
 width: 71px;
 height: 71px;
@@ -38,7 +38,7 @@ margin: 10px;
 padding: 20px;
 font-size: 64px;
 cursor:pointer;
-text-align: center;
+text-align: center;*/
 }
 
 /*This makes the tiles.*/
@@ -159,6 +159,35 @@ color: transparent;
   background-color: 0;
   border: 0px;
 }
+
+
+
+
+
+.life_Container{
+  margin: 10pt
+  padding: 10 pt
+  border: 1px solid black;
+  background-color: red;
+  width: 100%;
+  height: 71px;
+  display:flex;
+}
+.heart{
+  width: 10px;
+  height: 10px;
+  background-color: green;
+  margin: 10pt;
+}
+
+
+
+
+
+
+
+
+
 
 
 

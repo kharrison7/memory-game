@@ -66,6 +66,13 @@ let tile_Elements = document.getElementsByTagName("li");
   while ( 0 < tile_Elements.length ){
     tile_Elements[0].remove();
   }
+
+  // This removes the life_container.
+  let z = document.getElementsByClassName("life_Container");
+  while ( 0 < z.length ){
+   z[0].remove();
+  }
+
   // This places a you won message with the time you took to win where the timer was located.
   let a = document.querySelector( "#total_board" );
   let c     = document.createElement( "h1" );
@@ -87,6 +94,43 @@ let tile_Elements = document.getElementsByTagName("li");
   // This makes a new start button appear.
   start_Game_Button();
 }
+
+
+
+// This makes the life counters.
+function make_Life_Counters(){
+  let a = document.querySelector( "#lifeCounterGoesHere" );
+  // This makes the header.
+  let e     = document.createElement( "div" );
+  e.setAttribute("class", "life_Container");
+  a.appendChild( e );
+
+  for( let i = 0; i < 18; i++ ){
+    let b = document.createElement( "div" );
+    b.setAttribute("class", "heart");
+    e.appendChild(b);
+  }
+}
+
+
+let lifeLost = 0;
+// This removes the life counters.
+function lose_Life(){
+  lifeLost = lifeLost + 1;
+  if(lifeLost > 18){
+    console.log("Game Over");
+  }
+ else{
+  let x = document.getElementsByClassName("heart");
+   x[0].remove();
+ }
+}
+
+
+
+
+
+
 
 
 
@@ -240,6 +284,10 @@ switch(tiles_Flipped_Even%2){
     this.setAttribute("class", "show_Forever " + this.id.slice(-1));
     this.removeEventListener("click", clickToFlip);
   }
+  else{
+    // This removes a life counter.
+    lose_Life();
+  }
 }
 console.log("This class is " + this.className);
    console.log("Tiles e/o: " + tiles_Flipped_Even);
@@ -388,10 +436,12 @@ let x = document.getElementsByClassName("start_Message");
 while ( 0 < x.length ){
  x[0].remove();
 }
+// This removes the header.
 let y = document.getElementsByClassName("end_Message");
 while ( 0 < y.length ){
  y[0].remove();
 }
+
 
 // This resets some values if begin another game.
 game_Is_Over = false;
@@ -400,10 +450,12 @@ random_Set = [];
 tiles_Flipped_Even = 0;
 tile_Sets_Matched = 0;
 counter = 0;
+lifeLost = 0;
 
 // This begins the game.
 tickTock();
 placeHeader();
+make_Life_Counters();
 placeTiles();
 }
 
