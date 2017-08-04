@@ -55,7 +55,7 @@ display: inline-block;
 box-sizing: border-box;
 float: left;
 z-index: 100;
-border: 1pt solid black;
+border: 2pt solid black;
 border-radius: 5px;
 }
 
@@ -234,6 +234,7 @@ body, html {
   background-image: url("Tile_Images/C1iQyUo.gif");
 }
 .h{
+  background-size: 120% 100%;
   background-image: url("Tile_Images/Nrq6rgV.gif");
 }
 .i{
@@ -252,19 +253,18 @@ body, html {
 
 /*This lets the tile re-size if the screen gets smaller.*/
 @media screen and (max-width: 1058px){
- .tile{
-  background-color: green;
-  height: 15%;
-  width: 15%;
+  li{
+  margin: 2pt;
+  height: 100pt;
+  width: 100pt;
  }
 }
 
 @media screen and (max-width: 810px){
- .tile{
-  background-color: pink;
-  height: 127px;
-  width: 127px;
- }
+  li{
+  margin: 2pt;
+  height: 80pt;
+  width: 80pt;
 }
 
 /*This moves the clock*/
