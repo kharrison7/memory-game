@@ -363,13 +363,21 @@ let liH2     = document.createElement( "h2" );
 // This code runs when the one opens the page.
 function start_Game_Button(){
 let a = document.querySelector( "#total_board" );
+
+// This makes the header.
+let e     = document.createElement( "h1" );
+e.setAttribute("class", "end_Message");
+let f = "Memory Matching";
+e.innerHTML = f ;
+a.appendChild( e );
+
+// This makes the start button.
 let c     = document.createElement( "h1" );
 c.setAttribute("class", "start_Message");
 let d = "start game";
 c.addEventListener('click', game_On);
 c.innerHTML = d ;
 a.appendChild( c );
-
 
 }
 
