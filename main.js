@@ -364,8 +364,8 @@ let liH2     = document.createElement( "h2" );
 function start_Game_Button(){
 let a = document.querySelector( "#total_board" );
 let c     = document.createElement( "h1" );
-c.setAttribute("class", "end_Message");
-let d = "start";
+c.setAttribute("class", "start_Message");
+let d = "start game";
 c.addEventListener('click', game_On);
 c.innerHTML = d ;
 a.appendChild( c );
@@ -376,9 +376,13 @@ a.appendChild( c );
 // This runs when start is clicked.
 function game_On(){
 // This removes the start button.
-let x = document.getElementsByClassName("end_Message");
+let x = document.getElementsByClassName("start_Message");
 while ( 0 < x.length ){
  x[0].remove();
+}
+let y = document.getElementsByClassName("end_Message");
+while ( 0 < y.length ){
+ y[0].remove();
 }
 
 // This resets some values if begin another game.
