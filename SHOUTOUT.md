@@ -33,3 +33,11 @@ Hey Listen:
 http://orig00.deviantart.net/c17c/f/2012/188/d/6/hey_listen___cp_by_superheropattyfatty-d56e5mr.gif
 Pixel Bounce Link:
 http://37.media.tumblr.com/15dbbda357f6061c7ff6093b364049e3/tumblr_n6r3dlhxJG1ro0c29o1_r1_500.gif
+Every Item Link:
+https://media.giphy.com/media/7yJoer3NxSH3q/giphy.gif
+Sleepy Link:
+http://24.media.tumblr.com/6081e774dbf0d6126975d45b29b349df/tumblr_moln5ciIZc1r0ralmo1_500.gif
+Items On WHite:
+https://media.tenor.com/images/5c658a5bebd1488a01acd1e61b4bd6a9/tenor.gif
+Single Gem:
+https://media.tenor.com/images/bb74973bc02ffeb8a386da94a1e60e3d/tenor.gif
