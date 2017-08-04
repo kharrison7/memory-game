@@ -8,6 +8,7 @@
 
 /*This lets the size of the page control the position of the tiles.*/
 #hereWeFlex {
+  margin-top: -20pt;
   display: flex;
   justify-content: center;
   align-content: center;
@@ -165,68 +166,23 @@ color: transparent;
 
 
 .life_Container{
-  margin: 10pt
-  padding: 10 pt
-  border: 1px solid black;
-  background-color: red;
   width: 100%;
-  height: 71px;
+  height: 60px;
   display:flex;
+  align-self: center;
+  justify-content: center;
 }
 .heart{
-  width: 10px;
-  height: 10px;
-  background-color: green;
-  margin: 10pt;
+  width: 30px;
+  height: 30px;
+  /*background-color: green;*/
+  margin: 2pt;
+
+  background-size: 100% 100%;
+  background-position: center 0pt;
+  background-image: url("images/OiEpiWZ.png");
 }
 
-
-
-
-
-
-
-
-
-
-
-
-/*This lets the tile re-size if the screen gets smaller.*/
-@media screen and (max-width: 1058px){
- .tile{
-  background-color: green;
-  height: 15%;
-  width: 15%;
- }
-}
-
-@media screen and (max-width: 810px){
- .tile{
-  background-color: pink;
-  height: 127px;
-  width: 127px;
- }
-}
-
-/*This moves the clock*/
-#clockGoesHere{
-/*float: right;*/
-
-}
-
-
-
-/*This makes the tile*/
-/*.tile {
-  display: inline-block;
-  transition: 0.2s;
-  opacity: 0.8;
-  margin: 4px;
-  height: 100px;
-  width: 100px;
-  border: thin solid blue;
-  text-align: center;
-}*/
 
 /*This makes the background color.*/
 body, html {
@@ -278,4 +234,36 @@ body, html {
 }
 .i{
   background-image: url("Tile_Images/bUv4KW8.gif");
+}
+
+
+
+
+
+
+
+
+
+/*At some point in the future I would like to add mobile and tablet view options.*/
+
+/*This lets the tile re-size if the screen gets smaller.*/
+@media screen and (max-width: 1058px){
+ .tile{
+  background-color: green;
+  height: 15%;
+  width: 15%;
+ }
+}
+
+@media screen and (max-width: 810px){
+ .tile{
+  background-color: pink;
+  height: 127px;
+  width: 127px;
+ }
+}
+
+/*This moves the clock*/
+#clockGoesHere{
+/*float: right;*/
 }

@@ -171,7 +171,7 @@ function checkForMatch(){
     // This checks to see if you won the game.
     // This checks to see if you won the game.
     tile_Sets_Matched = tile_Sets_Matched + 1;
-    if (tile_Sets_Matched === 2){
+    if (tile_Sets_Matched === 18){
       game_Won();
       console.log("Game Won!");
     }
