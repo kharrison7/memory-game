@@ -213,7 +213,10 @@ body, html {
   background-image: url("Tile_Images/Distressed-Zelda-Triforce-Symbol-T-Shirt.jpg");
 }
 .b{
-  background-image: url("Tile_Images/small_the-legend-of-zelda-video-game-minimal-sword.jpg");
+  /*pixel link*/
+  background-size: 200% 200%;
+  background-position: center -50pt;
+  background-image: url("Tile_Images/gRGXJyN.gif");
 }
 .c{
   background-image: url("Tile_Images/HFme1Xz.gif");
