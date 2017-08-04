@@ -53,7 +53,7 @@ return random_Set;
 // This checks to see if the game was won.
 let game_Is_Over = false;
 
-function game_Won(){
+function game_Over( winLose ){
 // This variable should shut down the clock.
 game_Is_Over = true;
 // This removes the header.
@@ -87,7 +87,15 @@ let tile_Elements = document.getElementsByTagName("li");
     else{
      time_Took = min + " min " + sec + " sec";
     }
-  let d = "You Won! in " + time_Took;
+
+  let d = '';
+  if(winLose){
+  d = "You Won! in " + time_Took;
+  }
+  else{
+  d = "GAME OVER";
+  c.setAttribute("class", "end_Message lost");
+  }
   c.innerHTML = d ;
   a.appendChild( c );
 
@@ -118,6 +126,7 @@ let lifeLost = 0;
 function lose_Life(){
   lifeLost = lifeLost + 1;
   if(lifeLost > 18){
+    game_Over( false );
     console.log("Game Over");
   }
  else{
@@ -172,7 +181,7 @@ function checkForMatch(){
     // This checks to see if you won the game.
     tile_Sets_Matched = tile_Sets_Matched + 1;
     if (tile_Sets_Matched === 18){
-      game_Won();
+      game_Over( true );
       console.log("Game Won!");
     }
     return true;
@@ -353,6 +362,7 @@ function placeHeader(){
   let liText = document.createTextNode( "Memory Matching" );
 // This moves the text to the H2.
   liH2.appendChild( liText );
+  liH2.setAttribute("class", "LiH2");
 // This adds the H2 to the li tile.
   li.appendChild( liH2 );
 // This adds the li to the itemList.
@@ -384,8 +394,10 @@ if (game_Is_Over === true){
    if( min === 0 ){
    liText = sec + " sec";
    }
-   else if( min >= 10 ){
-     liText = "Time Expired."
+  //  This sets a time limit of 5 minutes.
+   else if( min >= 5 ){
+     liText = "";
+     game_Over( false );
    }
    else{
     liText = min + " min " + sec + " sec";

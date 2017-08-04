@@ -150,7 +150,7 @@ color: transparent;
 /*This changes the final message styling.*/
 .end_Message {
   margin-top: -20px;
-  font-family: Georgia;
+  font-family: Hylia Serif, Georgia, Times;
   font-size: 4em;
   font-variant: small-caps;
   color: #2685CE;
@@ -159,6 +159,10 @@ color: transparent;
   width: 90%;
   background-color: 0;
   border: 0px;
+}
+
+.lost {
+  color: #DB4C4C;
 }
 
 
