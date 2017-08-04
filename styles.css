@@ -118,21 +118,21 @@ color: transparent;
   font-family: Hylia Serif, Georgia, Times;
   font-size: 3em;
   font-variant: small-caps;
-  color: #2685CE;
+  color: white;
   /*-webkit-text-stroke-width: 0px;
    -webkit-text-stroke-color: #DB4C4C;*/
   width: 100%;
-  background-color: #B6B6B6;
+  background-color: #2685CE;
   border: 0px;
-  margin-top: 300pt;
-  margin-left: 30%;
+  margin-top: 320pt;
+  margin-left: 33%;
 
 /*This creates the border.*/
   border-radius: 25px;
-  border: 4px solid #DB4C4C;
+  border: 4px solid black;
   padding: 0px;
-  width: 30%;
-  height: 90px;
+  width: 25%;
+  height: 70px;
 
   /*This creates the text shadow:*/
    text-shadow: 0 1px 1px #DB4C4C;
