@@ -1,4 +1,12 @@
 
+Shout Out to the font creators:
+https://zeldauniverse.net/media/fonts/
+
+
+Shout out to shine effect creator: AntonTrollback.
+source: http://jsfiddle.net/AntonTrollback/nqQc7/
+
+
 
 Shout Out to these image creators! sources:
 Z-Sword:
