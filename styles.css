@@ -1,128 +1,76 @@
-
-
 @font-face {
     font-family: Hylia Serif;
     src: url("Hylia Serif Beta v0-009/HyliaSerifBeta-Regular.otf") format("opentype");
+    /*font made by: https://zeldauniverse.net/media/fonts/*/
 }
-
-
 /*This lets the size of the page control the position of the tiles.*/
 #hereWeFlex {
   margin-left: 20pt;
-  /*margin-top: -20pt;*/
   width: 100%;
   display: flex;
   justify-content: center;
   align-content: center;
 }
-
-
 /*This makes the outer board appear properly.*/
 #total_board{
   background: transparent;
-  /*border: #999 1px solid;*/
   width: 800px;
   height: 60%;
   padding:24px;
   margin-top: -30pt;
-  /*display: flex;*/
-  /*margin:0px auto;*/
 }
-
 /*This makes each tile appear properly.*/
 #total_board > div {
-/*background: url() no-repeat;*/
-/*background-color: #0223FF;
-border: 1px solid;
-width: 71px;
-height: 71px;
-float: left;
-margin: 10px;
-padding: 20px;
-font-size: 64px;
-cursor:pointer;
-text-align: center;*/
 }
-
-
-
-
-
-
-
-
-
 /*This makes the tiles.*/
-/*.tile{*/
 li{
-margin: 2pt;
-height: 180pt;
-width: 180pt;
-background-color: #7986cb;
-/*padding-bottom: ;*/
-position: relative;
-display: inline-block;
-box-sizing: border-box;
-float: left;
-z-index: 100;
-border: 2pt solid black;
-border-radius: 5px;
-cursor:pointer;
+  margin: 2pt;
+  height: 180pt;
+  width: 180pt;
+  background-color: #7986cb;
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  float: left;
+  z-index: 100;
+  border: 2pt solid black;
+  border-radius: 5px;
+  cursor:pointer;
 }
-
-
-
 
 /*These control the card appearances while the card is hidden and flipped.*/
 .hide{
   transform:rotateX(180deg);
   transition: All 1s;
-  /*color: #7986cb;*/
   color: transparent;
-  /*text-shadow: 0 0 5px #7986cb;*/
   background-color: white;
   background-image: url("Potential Images/small_triangle.png");
   background-size: 90% 90%;
   background-repeat: no-repeat;
   background-position: center center;
 }
-
 .show{
-/*This controls the flip transitions.*/
-transition: All 1s;
-transform:rotateX(360deg);
-/*font-size: 15pt;*/
-
-/*color: black;*/
-background-color: white;
-border: 3pt solid #F5D925;
-
-text-align: center;
-background-size: 100% 100%;
-background-repeat: no-repeat;
-background-position: center center;
-background-color: white;
-color: transparent;
-
-}
-
-.show_Forever{
-/*This controls the flip transitions.*/
-transition: All 1s;
-transform:rotateX(360deg);
-/*font-size: 25pt;
-color: black;
-background-color: #7986cb;*/
-border: 4pt solid #5EFF33;
-color: transparent;
-
-
+  transition: All 1s;
+  transform:rotateX(360deg);
+  background-color: white;
+  border: 3pt solid #F5D925;
   text-align: center;
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center center;
   background-color: white;
-
+  color: transparent;
+}
+.show_Forever{
+  transition: All 1s;
+  transform:rotateX(360deg);
+  border: 4pt solid #5EFF33;
+  color: transparent;
+  text-align: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: white;
 }
 /*This controls the start game message styling.*/
 .start_Message {
@@ -130,33 +78,25 @@ color: transparent;
   font-size: 3em;
   font-variant: small-caps;
   color: white;
-  /*-webkit-text-stroke-width: 0px;
-   -webkit-text-stroke-color: #DB4C4C;*/
   width: 100%;
   background-color: #2685CE;
   border: 0px;
   margin-top: 700pt;
   margin-left: 36%;
-
 /*This creates the border.*/
   border-radius: 25px;
   border: 4px solid black;
   padding: 0px;
   width: 25%;
   height: 70px;
-
-  /*This creates the text shadow:*/
-   text-shadow: 0 1px 1px #DB4C4C;
-
-   /*This stretches the text:*/
-   transform: scale(1, 1.5);
+  text-shadow: 0 1px 1px #DB4C4C;
+  transform: scale(1, 1.5);
+  /*These make the text scale appropriately for different browsers.*/
   -webkit-transform: scale(1, 1.5); /* Safari and Chrome */
   -moz-transform: scale(1, 1.5); /* Firefox */
   -ms-transform: scale(1, 1.5); /* IE 9+ */
   -o-transform: scale(1, 1.5); /* Opera */
 }
-
-
 /*This changes the final message styling.*/
 .end_Message {
   margin-top: 100px;
@@ -169,20 +109,13 @@ color: transparent;
   background-color: 0;
   border: 0px;
 }
-
-
 .lost {
   color: #DB4C4C;
 }
-
-
-
-
 /*These control the life container and hearts.*/
 .life_Container{
   width: 100%;
   height: 120px;
-  /*margin-left: 4%;*/
   display:flex;
   align-self: center;
   justify-content: center;
@@ -191,13 +124,10 @@ color: transparent;
   width: 45px;
   height: 45px;
   margin: 1pt;
-
   background-size: 100% 100%;
   background-position: center 0pt;
   background-image: url("images/OiEpiWZ.png");
 }
-
-
 /*This makes the background color.*/
 body, html {
   text-align: center;
@@ -209,25 +139,10 @@ body, html {
   background-repeat: no-repeat;
   background-position: 10px 10px;
   background-color: #F6FDFC;
-  /*border: 1pt solid pink;*/
 }
-
 body{
   background-color: #F6FDFC;
 }
-
-
-/*#color_block {
- float: right;
- background-color: #F6FDFC;
- margin-top: 300px;
- width: 100%;
- height: 90px;
- border: 1pt solid black;
- position: relative;
- }*/
-
-
 
 /*These control the tile images:*/
 /*These control the tile images:*/
@@ -235,7 +150,6 @@ body{
 .a{
   background-image: url("Tile_Images/cIesCeS.gif");
 }
-
 .c{
   background-image: url("Tile_Images/HFme1Xz.gif");
 }
@@ -258,7 +172,6 @@ body{
 .i{
   background-image: url("Tile_Images/bUv4KW8.gif");
 }
-
 /*This fixes one of the tile images.*/
 .b{
   /*pixel link*/
@@ -267,63 +180,27 @@ body{
   background-image: url("Tile_Images/gRGXJyN.gif");
 }
 
-
-
-
-
-
-
-/*At some point in the future I would like to add mobile and tablet view options.*/
-
-/*This lets the tile re-size if the screen gets smaller.*/
-/*@media (min-width: 500px) {
-
-  li{
-  margin: 2pt;
-  height: 100pt;
-  width: 100pt;
- }
- #total_board{
-   background: transparent;
-   width: 90%;
-   height:70%;
-
-   background: transparent;
-   padding:24px;
-   margin-top: 20pt;
-}
-}*/
-
-
-
-
+/*This makes the game appear properly on desktop.*/
 @media screen and (min-width: 750pt) {
-
-  .end_Message {
+ .end_Message {
     margin-top: 100px;
     margin-left: 0%;
   }
-
-
-.start_Message {
-  margin-top: 400px;
-  margin-left: 32%;
-}
-
-
-  li{
-  margin: 2pt;
-  height: 120pt;
-  width: 120pt;
+ .start_Message {
+    margin-top: 400px;
+    margin-left: 32%;
   }
-
-    #total_board{
+  li{
+    margin: 2pt;
+    height: 120pt;
+    width: 120pt;
+  }
+  #total_board{
     background: transparent;
     width: 800pt;
     height: 700px;
-    }
-
-   .life_Container{
+  }
+  .life_Container{
      width: 100%;
      margin-left: -2%;
      height: 80px;
@@ -331,7 +208,6 @@ body{
      align-self: center;
      justify-content: center;
    }
-
    .heart{
      width: 30pt;
      height: 30pt;
@@ -340,7 +216,6 @@ body{
      background-position: center 0pt;
      background-image: url("images/OiEpiWZ.png");
    }
-
    /*This makes the background color.*/
    body, html {
      text-align: center;
@@ -357,21 +232,16 @@ body{
      background-repeat: no-repeat;
      background-position: center center;
    }
-
    /*This controls the box containing the tiles.*/
    #hereWeFlex {
      margin-top: 30pt;
      margin-left: 0pt;
      margin-top: 0pt;
      width: 100%;
-
    }
-
    .b{
-     /*pixel link*/
      background-size: 200% 200%;
      background-position: center -50pt;
      background-image: url("Tile_Images/gRGXJyN.gif");
    }
-
 }
