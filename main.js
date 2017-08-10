@@ -10,7 +10,7 @@ let memory_TileIDs = [];
 
 
 
-
+let game_Next = 0;
 
 
 // This generates a random order of memory_Options Array.
@@ -99,6 +99,9 @@ let tile_Elements = document.getElementsByTagName("li");
   c.innerHTML = d ;
   a.appendChild( c );
 
+
+  // This lets the game know another game has been played.
+  game_Next++;
   // This makes a new start button appear.
   start_Game_Button();
 }
@@ -425,11 +428,13 @@ function start_Game_Button(){
 let a = document.querySelector( "#total_board" );
 
 // This makes the header.
+if(game_Next === 0 ){
 let e     = document.createElement( "h1" );
 e.setAttribute("class", "end_Message");
 let f = "Memory Matching";
 e.innerHTML = f ;
 a.appendChild( e );
+}
 
 // This makes the start button.
 let c     = document.createElement( "h1" );
