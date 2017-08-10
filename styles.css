@@ -8,7 +8,9 @@
 
 /*This lets the size of the page control the position of the tiles.*/
 #hereWeFlex {
+  margin-left: 50pt;
   margin-top: -20pt;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-content: center;
@@ -19,10 +21,10 @@
 #total_board{
   background: transparent;
   /*border: #999 1px solid;*/
-  width:1000px;
-  height:700px;
+  width: 800px;
+  height: 60%;
   padding:24px;
-  margin-top: 20pt;
+  margin-top: -30pt;
   /*display: flex;*/
   /*margin:0px auto;*/
 }
@@ -47,12 +49,15 @@ text-align: center;*/
 
 
 
+
+
+
 /*This makes the tiles.*/
 /*.tile{*/
 li{
 margin: 2pt;
-height: 120pt;
-width: 120pt;
+height: 180pt;
+width: 180pt;
 background-color: #7986cb;
 /*padding-bottom: ;*/
 position: relative;
@@ -75,9 +80,8 @@ border-radius: 5px;
   color: transparent;
   /*text-shadow: 0 0 5px #7986cb;*/
   background-color: white;
-
-  background-image: url("images/R90Odkc.jpg");
-  background-size: 370% 280%;
+  background-image: url("Potential Images/small_triangle.png");
+  background-size: 90% 90%;
   background-repeat: no-repeat;
   background-position: center center;
 }
@@ -130,7 +134,7 @@ color: transparent;
   width: 100%;
   background-color: #2685CE;
   border: 0px;
-  margin-top: 320pt;
+  margin-top: 820pt;
   margin-left: 32%;
 
 /*This creates the border.*/
@@ -154,9 +158,10 @@ color: transparent;
 
 /*This changes the final message styling.*/
 .end_Message {
-  margin-top: -20px;
+  margin-top: 180px;
+  margin-left: 5%;
   font-family: Hylia Serif, Georgia, Times;
-  font-size: 4em;
+  font-size: 6em;
   font-variant: small-caps;
   color: #2685CE;
   /*-webkit-text-stroke-width: 1px;
@@ -176,16 +181,16 @@ color: transparent;
 /*These control the life container and hearts.*/
 .life_Container{
   width: 100%;
-  height: 60px;
+  height: 120px;
+  margin-left: 4%;
   display:flex;
   align-self: center;
   justify-content: center;
 }
 .heart{
-  width: 30px;
-  height: 30px;
-  /*background-color: green;*/
-  margin: 2pt;
+  width: 45px;
+  height: 45px;
+  margin: 1pt;
 
   background-size: 100% 100%;
   background-position: center 0pt;
@@ -196,8 +201,9 @@ color: transparent;
 /*This makes the background color.*/
 body, html {
   text-align: center;
-  background-image: url("images/R90Odkc copy.jpg");
-  background-size: 270% 270%;
+  background-image: url("Tile_Images/C1iQyUo.gif");
+  background-size: 100% 100%;
+  background-color: #F6FDFC;
   background-repeat: no-repeat;
   background-position: center center;
   background-color: white;
@@ -212,12 +218,7 @@ body, html {
 .a{
   background-image: url("Tile_Images/cIesCeS.gif");
 }
-.b{
-  /*pixel link*/
-  background-size: 200% 200%;
-  background-position: center -50pt;
-  background-image: url("Tile_Images/gRGXJyN.gif");
-}
+
 .c{
   background-image: url("Tile_Images/HFme1Xz.gif");
 }
@@ -241,7 +242,13 @@ body, html {
   background-image: url("Tile_Images/bUv4KW8.gif");
 }
 
-
+/*This fixes one of the tile images.*/
+.b{
+  /*pixel link*/
+  background-size: 200% 200%;
+  background-position: center center;
+  background-image: url("Tile_Images/gRGXJyN.gif");
+}
 
 
 
@@ -252,7 +259,7 @@ body, html {
 /*At some point in the future I would like to add mobile and tablet view options.*/
 
 /*This lets the tile re-size if the screen gets smaller.*/
-@media (max-width: 1288px) {
+/*@media (min-width: 500px) {
 
   li{
   margin: 2pt;
@@ -268,34 +275,34 @@ body, html {
    padding:24px;
    margin-top: 20pt;
 }
-}
+}*/
 
 
 
 
-@media and (max-width: 500px) {
+@media screen and (min-width: 1000px) {
 
   li{
   margin: 2pt;
-  height: 70pt;
-  width: 70pt;
+  height: 120pt;
+  width: 120pt;
   }
     #total_board{
     background: transparent;
-    width: 700px;
+    width: 1000pt;
     height: 700px;
     }
    .life_Container{
      width: 100%;
-     height: 80px;
+     height: 60px;
      display:flex;
      align-self: center;
      justify-content: center;
    }
    .heart{
-     width: 15pt;
-     height: 15pt;
-     margin: 1pt;
+     width: 35pt;
+     height: 35pt;
+     margin: 2pt;
      background-size: 100% 100%;
      background-position: center 0pt;
      background-image: url("images/OiEpiWZ.png");
@@ -312,25 +319,26 @@ body, html {
    }
    .hide{
      background-color: white;
-     background-image: url("Potential Images/small_triangle.png");
-     background-size: 90% 90%;
+     background-image: url("images/R90Odkc.jpg");
+     background-size: 370% 280%;
+     background-repeat: no-repeat;
+     background-position: center center;
    }
 
    /*This controls the box containing the tiles.*/
    #hereWeFlex {
-     margin-left: 50pt;
-     margin-top: -20pt;
-     width: 300pt;
-     display: flex;
-     justify-content: center;
-     align-content: center;
+     margin-top: 30pt;
+     margin-left: 0pt;
+     margin-top: 0pt;
+     width: 100%;
+
    }
 
-   /*This fixes one of the tile images.*/
    .b{
      /*pixel link*/
      background-size: 200% 200%;
-     background-position: center center;
+     background-position: center -50pt;
      background-image: url("Tile_Images/gRGXJyN.gif");
    }
+
 }
