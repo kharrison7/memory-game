@@ -307,13 +307,8 @@ body{
 
 .start_Message {
   margin-top: 400px;
-  margin-left: 33%;
-
-
+  margin-left: 32%;
 }
-
-
-
 
 
   li{
@@ -321,18 +316,22 @@ body{
   height: 120pt;
   width: 120pt;
   }
+
     #total_board{
     background: transparent;
-    width: 1000pt;
+    width: 800pt;
     height: 700px;
     }
+
    .life_Container{
      width: 100%;
+     margin-left: -2%;
      height: 60px;
      display:flex;
      align-self: center;
      justify-content: center;
    }
+
    .heart{
      width: 35pt;
      height: 35pt;
