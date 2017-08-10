@@ -8,7 +8,7 @@
 
 /*This lets the size of the page control the position of the tiles.*/
 #hereWeFlex {
-  margin-left: 20pt; 
+  margin-left: 20pt;
   /*margin-top: -20pt;*/
   width: 100%;
   display: flex;
@@ -67,6 +67,7 @@ float: left;
 z-index: 100;
 border: 2pt solid black;
 border-radius: 5px;
+cursor:pointer;
 }
 
 
@@ -134,7 +135,7 @@ color: transparent;
   width: 100%;
   background-color: #2685CE;
   border: 0px;
-  margin-top: 820pt;
+  margin-top: 700pt;
   margin-left: 36%;
 
 /*This creates the border.*/
