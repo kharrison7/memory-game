@@ -42,6 +42,11 @@ cursor:pointer;
 text-align: center;*/
 }
 
+
+
+
+
+
 /*This makes the tiles.*/
 /*.tile{*/
 li{
@@ -168,7 +173,7 @@ color: transparent;
 
 
 
-
+/*These control the life container and hearts.*/
 .life_Container{
   width: 100%;
   height: 60px;
@@ -197,11 +202,6 @@ body, html {
   background-position: center center;
   background-color: white;
 }
-
-
-
-
-
 
 
 
@@ -252,7 +252,8 @@ body, html {
 /*At some point in the future I would like to add mobile and tablet view options.*/
 
 /*This lets the tile re-size if the screen gets smaller.*/
-@media screen and (max-width: 1058px){
+@media (max-width: 1288px) {
+
   li{
   margin: 2pt;
   height: 100pt;
@@ -260,22 +261,20 @@ body, html {
  }
  #total_board{
    background: transparent;
-   /*border: #999 1px solid;*/
    width: 90%;
    height:70%;
 
    background: transparent;
-   /*border: #999 1px solid;*/
-
    padding:24px;
    margin-top: 20pt;
+}
 }
 
 
 
 
+@media and (max-width: 500px) {
 
-@media screen and (max-width: 810px){
   li{
   margin: 2pt;
   height: 70pt;
@@ -283,7 +282,6 @@ body, html {
   }
     #total_board{
     background: transparent;
-    /*border: #999 1px solid;*/
     width: 700px;
     height: 700px;
     }
@@ -297,9 +295,7 @@ body, html {
    .heart{
      width: 15pt;
      height: 15pt;
-     /*background-color: green;*/
      margin: 1pt;
-
      background-size: 100% 100%;
      background-position: center 0pt;
      background-image: url("images/OiEpiWZ.png");
@@ -337,9 +333,4 @@ body, html {
      background-position: center center;
      background-image: url("Tile_Images/gRGXJyN.gif");
    }
-}
-
-/*This moves the clock*/
-#clockGoesHere{
-/*float: right;*/
 }
