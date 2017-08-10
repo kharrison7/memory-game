@@ -208,7 +208,7 @@ body, html {
   background-color: #F6FDFC;
   background-repeat: no-repeat;
   background-position: 10px 10px;
-  background-color: white;
+  background-color: #F6FDFC;
   /*border: 1pt solid pink;*/
 }
 
@@ -326,15 +326,15 @@ body{
    .life_Container{
      width: 100%;
      margin-left: -2%;
-     height: 60px;
+     height: 80px;
      display:flex;
      align-self: center;
      justify-content: center;
    }
 
    .heart{
-     width: 35pt;
-     height: 35pt;
+     width: 30pt;
+     height: 30pt;
      margin: 2pt;
      background-size: 100% 100%;
      background-position: center 0pt;
