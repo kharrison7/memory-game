@@ -164,8 +164,6 @@ color: transparent;
   font-size: 6em;
   font-variant: small-caps;
   color: #2685CE;
-  /*-webkit-text-stroke-width: 1px;
-   -webkit-text-stroke-color: white;*/
   width: 90%;
   background-color: 0;
   border: 0px;
@@ -202,13 +200,12 @@ color: transparent;
 body, html {
   text-align: center;
   background-image: url("Tile_Images/C1iQyUo.gif");
-  background-size: 100% 100%;
+  background-size: 130% 130%;
   background-color: #F6FDFC;
   background-repeat: no-repeat;
   background-position: center center;
   background-color: white;
 }
-
 
 
 
