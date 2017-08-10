@@ -297,7 +297,24 @@ body{
 
 
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 500px) {
+
+  .end_Message {
+    margin-top: 100px;
+    margin-left: 0%;
+  }
+
+
+.start_Message {
+  margin-top: 400px;
+  margin-left: 33%;
+
+
+}
+
+
+
+
 
   li{
   margin: 2pt;
